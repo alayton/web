@@ -257,7 +257,7 @@
         },
         {
             "location": "/other/components-and-packages/",
-            "text": "Components \n Packages\n\n\nThe following is a list of components and packages maintained by Tonis. All code has the following requirements:\n\n\n\n\nPHP 5.5 or higher, PHP 7, and HHVM support.\n\n\nComposer support\n\n\n100% unit test coverage\n\n\nMinimal dependencies\n\n\nPSR-1/PSR-2 and PSR-4 compliant\n\n\nHigh quality code (\n= 9 on \nScrutinizer\n)\n\n\n\n\nComponents\n\n\n\n\n\n\n\n\nComponent\n\n\nBuild Status\n\n\nCode Coverage\n\n\nCode Quality\n\n\n\n\n\n\n\n\n\n\nDi\n\n\n\n\n\n\n\n\n\n\n\n\nDispatcher\n\n\n\n\n\n\n\n\n\n\n\n\nEvent\n\n\n\n\n\n\n\n\n\n\n\n\nMvc\n\n\n\n\n\n\n\n\n\n\n\n\nPackage\n\n\n\n\n\n\n\n\n\n\n\n\nRouter\n\n\n\n\n\n\n\n\n\n\n\n\nView\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPackages\n\n\n\n\n\n\n\n\nPackage\n\n\nBuild Status\n\n\nCode Coverage\n\n\nCode Quality\n\n\n\n\n\n\n\n\n\n\nAsset\n\n\n\n\n\n\n\n\n\n\n\n\nDoctrine\n\n\n\n\n\n\n\n\n\n\n\n\nDoctrine ORM",
+            "text": "Components \n Packages\n\n\nThe following is a list of components and packages maintained by Tonis. All code has the following requirements:\n\n\n\n\nPHP 5.5 or higher, PHP 7, and HHVM support.\n\n\nComposer support\n\n\n100% unit test coverage\n\n\nMinimal dependencies\n\n\nPSR-1/PSR-2 and PSR-4 compliant\n\n\nHigh quality code (\n= 9 on \nScrutinizer\n)\n\n\n\n\nComponents\n\n\n\n\n\n\n\n\nComponent\n\n\nBuild Status\n\n\nCode Coverage\n\n\nCode Quality\n\n\n\n\n\n\n\n\n\n\nDi\n\n\n\n\n\n\n\n\n\n\n\n\nDispatcher\n\n\n\n\n\n\n\n\n\n\n\n\nEvent\n\n\n\n\n\n\n\n\n\n\n\n\nTonis\n\n\n\n\n\n\n\n\n\n\n\n\nPackage\n\n\n\n\n\n\n\n\n\n\n\n\nRouter\n\n\n\n\n\n\n\n\n\n\n\n\nView\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPackages\n\n\n\n\n\n\n\n\nPackage\n\n\nBuild Status\n\n\nCode Coverage\n\n\nCode Quality\n\n\n\n\n\n\n\n\n\n\nAsset\n\n\n\n\n\n\n\n\n\n\n\n\nDoctrine\n\n\n\n\n\n\n\n\n\n\n\n\nDoctrine ORM",
             "title": "Components & Packages"
         },
         {
@@ -267,7 +267,7 @@
         },
         {
             "location": "/other/components-and-packages/#components",
-            "text": "Component  Build Status  Code Coverage  Code Quality      Di       Dispatcher       Event       Mvc       Package       Router       View",
+            "text": "Component  Build Status  Code Coverage  Code Quality      Di       Dispatcher       Event       Tonis       Package       Router       View",
             "title": "Components"
         },
         {
