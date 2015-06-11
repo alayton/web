@@ -128,6 +128,9 @@
                 <li class="toctree-l3"><a href="#sample-dispatchables">Sample Dispatchables</a></li>
                 
             
+                <li class="toctree-l3"><a href="#return-results">Return Results</a></li>
+                
+            
                 <li class="toctree-l3"><a href="#examples">Examples</a></li>
                 
                     <li><a class="toctree-l4" href="#traditional-controller">Traditional Controller</a></li>
@@ -279,6 +282,45 @@ about what your dispatchable is only that it can be called.</p>
 <li>Any object implementing <code>Tonis\Dispatcher\DispatchableInterface</code></li>
 <li>A closure <code>function() {}</code></li>
 </ul>
+<h2 id="return-results">Return Results</h2>
+<p>Tonis expects all dispatchables to return a result it can work with. By default, this includes <code>array</code>, <code>string</code>, and 
+any instance of <code>Tonis\View\ModelInterface</code>. If an invalid result is returned then Tonis will throw a 
+<code>Tonis\Tonis\Exception\InvalidDispatchResultException</code>.</p>
+<p>Valid return results and conversions are:</p>
+<dl>
+    <dt>Return Result</dt>
+    <dd>string</dd>
+    <dt>API Result</dt>
+    <dd><code>new StringModel(string)</code></dd>
+    <dt>Web Result</dt>
+    <dd><code>new StringModel(string)</code></dd>
+</dl>
+
+<hr />
+<dl>
+    <dt>Return Result</dt>
+    <dd>array</dd>
+    <dt>API Result</dt>
+    <dd><code>new JsonModel(array)</code></dd>
+    <dt>Web Result</dt>
+    <dd><code>new ViewModel(null, array)</code></dd>
+    <dt>Extra Note</dt>
+    <dd>
+        If the <code>$$template</code> key is specified then the ViewModel will use it instead of <code>null</code> for 
+        the template.
+    </dd>
+</dl>
+
+<hr />
+<dl>
+    <dt>Return Result</dt>
+    <dd>Tonis\View\ModelInterface</dd>
+    <dt>API Result</dt>
+    <dd>No change</dd>
+    <dt>Web Result</dt>
+    <dd>No change</dd>
+</dl>
+
 <h2 id="examples">Examples</h2>
 <p>Dispatchables are up to the user to implement but a few examples are listed below to get you started:</p>
 <h3 id="traditional-controller">Traditional Controller</h3>

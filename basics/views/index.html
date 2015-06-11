@@ -132,6 +132,15 @@
         
             <ul>
             
+                <li class="toctree-l3"><a href="#view-model">View Model</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#view-strategy">View Strategy</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#template-names">Template Names</a></li>
+                
+            
             </ul>
         
     </li>
@@ -253,7 +262,35 @@
           <div role="main">
             <div class="section">
               
-                
+                <p>Tonis features a ViewManager which enables you to use zero or more templating engines. For example, in APIs you can 
+enable the JSON Strategy which will allow rendering JSON. For the web you can enable the PlatesStrategy for PlatesPHP
+or the TwigStrategy for Twig. These are completely customizable and can be disabled at anytime.</p>
+<h2 id="view-model">View Model</h2>
+<p>A view model is a model of what data the view layer has access to. You assign data to a model and then the view can interact 
+with that data to render a result.</p>
+<p>Tonis includes the following models as part of the <code>Tonis\View</code> component.</p>
+<ul>
+<li>Tonis\View\Model\StringModel</li>
+<li>Tonis\View\Model\JsonModel</li>
+<li>Tonis\View\Model\PlatesModel</li>
+<li>Tonis\View\Model\TwigModel </li>
+</ul>
+<h2 id="view-strategy">View Strategy</h2>
+<p>A view strategy inspects the model at run-time to determine if it's capable of rendering and, if so, passes the model to 
+the renderer to do work.</p>
+<p>Tonis includes the following strategies as part of the <code>Tonis\View</code> component.</p>
+<ul>
+<li>Tonis\View\Strategy\StringStrategy</li>
+<li>Tonis\View\Strategy\JsonStrategy</li>
+<li>Tonis\View\Strategy\PlatesStrategy</li>
+<li>Tonis\View\Strategy\TwigStrategy</li>
+</ul>
+<h2 id="template-names">Template Names</h2>
+<p>Note: This section is only relevant for ViewModel's. If you are using Tonis for an API you can ignore this.</p>
+<p>If you do not return a <code>Tonis\View\Model\ViewModel</code> then Tonis will attempt to guess a template name based on the
+dispatchable name. This is very crud, however, and it is recommended that you set your template explicitly. When returning
+an array you can do so by setting the <code>$$template</code> key. If no template is able to be determined then a
+<code>Tonis\Tonis\Exception\InvalidTemplateException</code> will be thrown.</p>
               
             </div>
           </div>
