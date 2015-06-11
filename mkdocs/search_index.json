@@ -1,0 +1,279 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Tonis is a PSR-7 micro-framework that can also be used as MVC middleware. Tonis was built for flexibility and performance\nwhile still having the modularity of larger frameworks. Tonis features an event-driven architecture that allows you to \neasily customize the entire life-cycle for micro-services, apis, or even full on sites.\n\n\nTonis is built with best practices in mind and features 100% unit test coverage, integration tests, and high quality code.\nNo pull request will ever be merged that violates any of these standards.\n\n\nWhy Tonis?\n\n\nWith the abundance of frameworks and micro-frameworks out there why would you use Tonis?\n\n\n\n\nYou are using PHP 5.5+ and want to take advantage of modern features.\n\n\nYou want 100% unit tested and integration tested code.\n\n\nYou want high quality code.\n\n\nYou want to take advantage of PSR-7.\n\n\nYou want a middleware enabled framework.\n\n\nYou want code that runs on HHVM or PHP7 out of the box.\n\n\nYou want to avoid overused globals and static method calls.\n\n\nYou want modular and reusable code.\n\n\nYou want the freedom to choose your own project structure.\n\n\nYou do not want marketing bullshit and call a duck a duck.\n\n\nYou want to get into open source and become a contributor.\n\n\nYou want world peace.\n\n\n\n\nIf you answered yes to one or more of the above Tonis might be for you.\n\n\nThe Name\n\n\nI originally got into programming by writing scripts for a game called \nGemstone III\n \n(now Gemstone IV). The name comes from \nTonis\n in Gemstone's world of \n\nElanthia\n. Tonis is the messenger of the gods and is renowned for \nhis speed.\n\n\nFeatures\n\n\nTonis includes the following features out of the box:\n\n\n\n\nMultiple view engine support - includes Twig, Plates, and JSON out of the box.\n\n\nSingle purpose actions vs controllers\n\n\nError Handling\n\n\nDependency Injection\n\n\nMiddleware enabled\n\n\nPSR-7 compliant\n\n\nPackage (reusable chunks of code) management\n\n\n100% test coverage on all components\n\n\nHigh quality components\n\n\n\n\nSee \nComponents \n Packages\n for a list of officially supported components and packages.",
+            "title": "What is Tonis?"
+        },
+        {
+            "location": "/#why-tonis",
+            "text": "With the abundance of frameworks and micro-frameworks out there why would you use Tonis?   You are using PHP 5.5+ and want to take advantage of modern features.  You want 100% unit tested and integration tested code.  You want high quality code.  You want to take advantage of PSR-7.  You want a middleware enabled framework.  You want code that runs on HHVM or PHP7 out of the box.  You want to avoid overused globals and static method calls.  You want modular and reusable code.  You want the freedom to choose your own project structure.  You do not want marketing bullshit and call a duck a duck.  You want to get into open source and become a contributor.  You want world peace.   If you answered yes to one or more of the above Tonis might be for you.",
+            "title": "Why Tonis?"
+        },
+        {
+            "location": "/#the-name",
+            "text": "I originally got into programming by writing scripts for a game called  Gemstone III  \n(now Gemstone IV). The name comes from  Tonis  in Gemstone's world of  Elanthia . Tonis is the messenger of the gods and is renowned for \nhis speed.",
+            "title": "The Name"
+        },
+        {
+            "location": "/#features",
+            "text": "Tonis includes the following features out of the box:   Multiple view engine support - includes Twig, Plates, and JSON out of the box.  Single purpose actions vs controllers  Error Handling  Dependency Injection  Middleware enabled  PSR-7 compliant  Package (reusable chunks of code) management  100% test coverage on all components  High quality components   See  Components   Packages  for a list of officially supported components and packages.",
+            "title": "Features"
+        },
+        {
+            "location": "/getting-started/installation/",
+            "text": "Tonis uses \nComposer\n to manage dependencies and is required. Once composer is \ninstalled you can install Tonis using the following command:\n\n\nAs a Micro-Framework\n\n\nTo use Tonis as micro-framework you need to add \ntonis/tonis\n to \ncomposer.json\n.\n\n\ncomposer init\ncomposer require tonis/tonis\n\n\n\n\nOnce complete you use the following \nindex.php\n to get started.\n\n\n?php\nrequire __DIR__ . '/vendor/autoload.php';\n\n$tonis = (new \\Tonis\\Tonis\\Factory\\TonisFactory)-\ncreateWeb();\n$routes = $tonis-\nroutes();\n\n$routes-\nget('/hello/{name}', function ($name) {\n    return 'Hello ' . $name;\n});\n\necho $tonis-\nrun()-\ngetBody();\n\n\n\n\nAs Middleware\n\n\nSee the \nMiddleware documentation\n for more information.\n\n\nServer Requirements\n\n\nTonis has the following requirement:\n\n\n\n\nPHP 5.5 or greater",
+            "title": "Installation"
+        },
+        {
+            "location": "/getting-started/installation/#as-a-micro-framework",
+            "text": "To use Tonis as micro-framework you need to add  tonis/tonis  to  composer.json .  composer init\ncomposer require tonis/tonis  Once complete you use the following  index.php  to get started.  ?php\nrequire __DIR__ . '/vendor/autoload.php';\n\n$tonis = (new \\Tonis\\Tonis\\Factory\\TonisFactory)- createWeb();\n$routes = $tonis- routes();\n\n$routes- get('/hello/{name}', function ($name) {\n    return 'Hello ' . $name;\n});\n\necho $tonis- run()- getBody();",
+            "title": "As a Micro-Framework"
+        },
+        {
+            "location": "/getting-started/installation/#as-middleware",
+            "text": "See the  Middleware documentation  for more information.",
+            "title": "As Middleware"
+        },
+        {
+            "location": "/getting-started/installation/#server-requirements",
+            "text": "Tonis has the following requirement:   PHP 5.5 or greater",
+            "title": "Server Requirements"
+        },
+        {
+            "location": "/getting-started/contributing/",
+            "text": "Tonis and related components are open source and licensed as BSD-3-Clause. Contributions are welcome in the form of issue \nreports and pull requests. All pull requests should meet the requirements outlined on the \nComponents \n Packages\n \npage.\n\n\nGetting the Source\n\n\ngit clone git@github.com:tonis-io/tonis\ncomposer install\n\n\n\n\nRunning Tests\n\n\n./vendor/bin/phpunit -c test/phpunit.xml\n\n\n\n\nCoding Standards\n\n\nTonis uses PSR-2 coding standards and checks standards using \nPHP_CodeSniffer\n.\nTo check coding standards:\n\n\nvendor/bin/phpcs --standard=PSR2 -s -p src/ test/\n\n\n\n\nAdditonally, this is automatically checked by \nTravis CI\n and will cause a build failure if not valid.\n\n\nDocumentation\n\n\nAfter \"Getting the Source\" steps above you can find the documentation in in the \ndocs/\n folder. All documentation is written\nin markdown. Once you update the documentation, commit your changes and open a pull request.",
+            "title": "Contributing"
+        },
+        {
+            "location": "/getting-started/contributing/#getting-the-source",
+            "text": "git clone git@github.com:tonis-io/tonis\ncomposer install",
+            "title": "Getting the Source"
+        },
+        {
+            "location": "/getting-started/contributing/#running-tests",
+            "text": "./vendor/bin/phpunit -c test/phpunit.xml",
+            "title": "Running Tests"
+        },
+        {
+            "location": "/getting-started/contributing/#coding-standards",
+            "text": "Tonis uses PSR-2 coding standards and checks standards using  PHP_CodeSniffer .\nTo check coding standards:  vendor/bin/phpcs --standard=PSR2 -s -p src/ test/  Additonally, this is automatically checked by  Travis CI  and will cause a build failure if not valid.",
+            "title": "Coding Standards"
+        },
+        {
+            "location": "/getting-started/contributing/#documentation",
+            "text": "After \"Getting the Source\" steps above you can find the documentation in in the  docs/  folder. All documentation is written\nin markdown. Once you update the documentation, commit your changes and open a pull request.",
+            "title": "Documentation"
+        },
+        {
+            "location": "/getting-started/license/",
+            "text": "Copyright (c) 2014, Kyle Spraggs.\nAll rights reserved.\n\n\nRedistribution and use in source and binary forms, with or without modification,\nare permitted provided that the following conditions are met:\n\n\n\n\n\n\nRedistributions of source code must retain the above copyright notice,\n    this list of conditions and the following disclaimer.\n\n\n\n\n\n\nRedistributions in binary form must reproduce the above copyright notice,\n    this list of conditions and the following disclaimer in the documentation\n    and/or other materials provided with the distribution.\n\n\n\n\n\n\nNeither the name of Kyle Spraggs nor the names of its\n    contributors may be used to endorse or promote products derived from this\n    software without specific prior written permission.\n\n\n\n\n\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND\nANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED\nWARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR\nANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES\n(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;\nLOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON\nANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\nSOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.",
+            "title": "License"
+        },
+        {
+            "location": "/configuration/overview/",
+            "text": "The recommended way to get a Tonis object is by using the \nTonis\\Tonis\\Factory\\TonisFactory\n. The factory has several methods\navailable that will setup Tonis based on your application needs. For example, \ncreateApi()\n will attach subscribers\nsuited towards an API while \ncreateWeb()\n will attach subscribers more suited for a generic web application.\n\n\nAll factory methods accept a single \n$config\n array which will configure your Tonis instance. Internally, the array gets\nconverted into an instance of  \nTonis\\Tonis\\TonisConfig\n.",
+            "title": "Overview"
+        },
+        {
+            "location": "/configuration/settings/",
+            "text": "debug\n\n\nSets debug mode for Tonis. Packages can read this to determine sane defaults for configuration. An example is\ncaching based on debug mode.\n\n\n\n  \nType\n\n  \nboolean\n\n\n  \nDefault\n\n  \nfalse\n\n\n\n\n\ncache_dir\n\n\nSets the cache directory for Tonis. Packages should read this to determine where to put cache files.\n\n\n\n  \nType\n\n  \nstring\n\n\n  \nDefault\n\n  \nnull\n\n\n\n\n\nenvironment\n\n\nEnvironment variables to inject. These can be retrieved using the PHP method \ngetenv()\n.\n\n\n\n  \nType\n\n  \narray\n\n\n  \nDefault\n\n  \n[]\n\n\n\n\n\nrequired_environment\n\n\nEnvironment variables to require. If they are not present in \nenvironment\n (above) then an exception will be thrown. \nUseful to ensure your application is in a proper state during run-time.\n\n\n\n  \nType\n\n  \narray\n\n\n  \nDefault\n\n  \n['TONIS_DEBUG']\n\n\n  \nNotes\n\n  \nTonis handles setting \nTONIS_DEBUG\n from the \ndebug\n setting automatically.\n\n\n\n\n\npackages\n\n\nPackages to load. See the \nPackages\n documentation for more information.\n\n\n\n  \nType\n\n  \narray\n\n\n  \nDefault\n\n  \n[]\n\n\n  \nNotes\n\n  \nTonis\\Tonis is a package itself and is automatically loaded for you.\n\n\n\n\n\nsubscribers\n\n\nSubscribers to register. In generaly this is set for you by the \nTonis\\Tonis\\Factory\\TonisFactory\n. For most \nusers this will not need to be modified.\n\n\n\n  \nType\n\n  \narray\n\n\n  \nDefault\n\n  \n[]",
+            "title": "Settings"
+        },
+        {
+            "location": "/configuration/settings/#debug",
+            "text": "Sets debug mode for Tonis. Packages can read this to determine sane defaults for configuration. An example is\ncaching based on debug mode.  \n   Type \n   boolean \n\n   Default \n   false",
+            "title": "debug"
+        },
+        {
+            "location": "/configuration/settings/#cache_dir",
+            "text": "Sets the cache directory for Tonis. Packages should read this to determine where to put cache files.  \n   Type \n   string \n\n   Default \n   null",
+            "title": "cache_dir"
+        },
+        {
+            "location": "/configuration/settings/#environment",
+            "text": "Environment variables to inject. These can be retrieved using the PHP method  getenv() .  \n   Type \n   array \n\n   Default \n   []",
+            "title": "environment"
+        },
+        {
+            "location": "/configuration/settings/#required_environment",
+            "text": "Environment variables to require. If they are not present in  environment  (above) then an exception will be thrown. \nUseful to ensure your application is in a proper state during run-time.  \n   Type \n   array \n\n   Default \n   ['TONIS_DEBUG'] \n\n   Notes \n   Tonis handles setting  TONIS_DEBUG  from the  debug  setting automatically.",
+            "title": "required_environment"
+        },
+        {
+            "location": "/configuration/settings/#packages",
+            "text": "Packages to load. See the  Packages  documentation for more information.  \n   Type \n   array \n\n   Default \n   [] \n\n   Notes \n   Tonis\\Tonis is a package itself and is automatically loaded for you.",
+            "title": "packages"
+        },
+        {
+            "location": "/configuration/settings/#subscribers",
+            "text": "Subscribers to register. In generaly this is set for you by the  Tonis\\Tonis\\Factory\\TonisFactory . For most \nusers this will not need to be modified.  \n   Type \n   array \n\n   Default \n   []",
+            "title": "subscribers"
+        },
+        {
+            "location": "/basics/routing/",
+            "text": "You define routes by using the \nTonis\\Router\\RouteCollection\n available to Tonis. Additionally, packages may\nuse the \nconfigureRoutes()\n method to define their routes.\n\n\nBasic Routes\n\n\nYou can add routes to the route collection using the \nadd()\n method. \n\n\n$routes-\nadd('/', function() {\n    return 'Hey Tonis';\n});\n\n\n\n\nHTTP Verbs\n\n\nThe route collection provides methods mapped to HTTP verbs as a convenience.\n\n\n$routes-\nget('/', function () { ... });\n$routes-\npost('/', function () { ... });\n$routes-\npatch('/', function () { ... });\n$routes-\nput('/', function () { ... });\n$routes-\ndelete('/', function () { ... });\n\n\n\n\nRoute Handler\n\n\nThe second parameter of any method above is the handler. The handler is what \nTonis\\Dispatcher\n uses to create the \ndispatchable resource and generate a dispatch result. View the \nDispatching documentation\n for \nmore information.\n\n\nRoute Parameters\n\n\n// required name parameter - matches /hello/tonis\n$routes-\nget('/hello/{name}', ...);\n\n// optional name parameter - matches /hello or /hello/tonis\n$routes-\nget('/hello{/name?}', ...);\n\n\n\n\nIt's important to note the \"/\" inside the \"{\". If you leave this outside the curl brace it is not optional and will\nbe required for the route to match!\n\n\n// parameter constraints - matches /hello/tonis but not /hello/1234\n$routes-\nget('/hello/{name:\\w+}', ...);\n\n// the kitchen sink (id is required as a digit, name is optional and matches a-z and A-Z\n// matches /hello/1 or /hello/1-tonis\n$routes-\nget('/hello/{id:\\d+}{-name?:[a-zA-Z]+}');\n\n\n\n\nAssembling URLs\n\n\nIn order to assemble a route you must have given it a name.\n\n\n$routes-\nget('/', function () {}, 'name');\n\n\n\n\nTo generate a url from a route you may use the \nassemble()\n method on the \nRouteCollection\n.\n\n\n$routes-\nassemble('name')\n\n\n\n\nMethods\n\n\nYou can opt out of using the HTTP verbs and setting methods manually on a route by using the \nmethods()\n method.\nThis allows you to tell a route that it can match on multiple HTTP verbs.\n\n\nDefault: \n[]\n\n\n$routes\n    -\nadd('/', function() {})\n    -\nmethods(['GET', 'POST']);\n\n\n\n\nDefaults\n\n\nYou can set parameter defaults for parameters that are not specified by using the \ndefaults()\n method.\n\n\nDefault: \n[]\n\n\n$routes\n    -\nget('/{name}', function() {})\n    -\ndefaults(['name' =\n 'Anonymous']);\n\n\n\n\nAccepts\n\n\nYou can set what Accept header the match will route by using the \naccepts()\n method.\n\n\nDefault: \n['*']\n\n\n$routes\n    -\nget('/api/people.json', function() {})\n    -\naccepts(['application/json']);\n\n\n\n\nSecure\n\n\nYou can tell the route to only allow secure requests by using the \nsecure()\n method. Passing\n\ntrue\n will match secure connections, \nfalse\n will only match insecure connections, and \nnull\n will\nallow any connection type.\n\n\nDefault: \nnull\n\n\n$routes\n    -\nget('/user/login', function() {})\n    -\nsecure(true);\n\n$routes\n    -\nget('/insecure', function() {})\n    -\nsecure(false);\n\n$routes\n    -\nget('/', function() {})\n    -\nsecure(null);",
+            "title": "Routing"
+        },
+        {
+            "location": "/basics/routing/#basic-routes",
+            "text": "You can add routes to the route collection using the  add()  method.   $routes- add('/', function() {\n    return 'Hey Tonis';\n});",
+            "title": "Basic Routes"
+        },
+        {
+            "location": "/basics/routing/#http-verbs",
+            "text": "The route collection provides methods mapped to HTTP verbs as a convenience.  $routes- get('/', function () { ... });\n$routes- post('/', function () { ... });\n$routes- patch('/', function () { ... });\n$routes- put('/', function () { ... });\n$routes- delete('/', function () { ... });",
+            "title": "HTTP Verbs"
+        },
+        {
+            "location": "/basics/routing/#route-handler",
+            "text": "The second parameter of any method above is the handler. The handler is what  Tonis\\Dispatcher  uses to create the \ndispatchable resource and generate a dispatch result. View the  Dispatching documentation  for \nmore information.",
+            "title": "Route Handler"
+        },
+        {
+            "location": "/basics/routing/#route-parameters",
+            "text": "// required name parameter - matches /hello/tonis\n$routes- get('/hello/{name}', ...);\n\n// optional name parameter - matches /hello or /hello/tonis\n$routes- get('/hello{/name?}', ...);  It's important to note the \"/\" inside the \"{\". If you leave this outside the curl brace it is not optional and will\nbe required for the route to match!  // parameter constraints - matches /hello/tonis but not /hello/1234\n$routes- get('/hello/{name:\\w+}', ...);\n\n// the kitchen sink (id is required as a digit, name is optional and matches a-z and A-Z\n// matches /hello/1 or /hello/1-tonis\n$routes- get('/hello/{id:\\d+}{-name?:[a-zA-Z]+}');",
+            "title": "Route Parameters"
+        },
+        {
+            "location": "/basics/routing/#assembling-urls",
+            "text": "In order to assemble a route you must have given it a name.  $routes- get('/', function () {}, 'name');  To generate a url from a route you may use the  assemble()  method on the  RouteCollection .  $routes- assemble('name')",
+            "title": "Assembling URLs"
+        },
+        {
+            "location": "/basics/routing/#methods",
+            "text": "You can opt out of using the HTTP verbs and setting methods manually on a route by using the  methods()  method.\nThis allows you to tell a route that it can match on multiple HTTP verbs.  Default:  []  $routes\n    - add('/', function() {})\n    - methods(['GET', 'POST']);",
+            "title": "Methods"
+        },
+        {
+            "location": "/basics/routing/#defaults",
+            "text": "You can set parameter defaults for parameters that are not specified by using the  defaults()  method.  Default:  []  $routes\n    - get('/{name}', function() {})\n    - defaults(['name' =  'Anonymous']);",
+            "title": "Defaults"
+        },
+        {
+            "location": "/basics/routing/#accepts",
+            "text": "You can set what Accept header the match will route by using the  accepts()  method.  Default:  ['*']  $routes\n    - get('/api/people.json', function() {})\n    - accepts(['application/json']);",
+            "title": "Accepts"
+        },
+        {
+            "location": "/basics/routing/#secure",
+            "text": "You can tell the route to only allow secure requests by using the  secure()  method. Passing true  will match secure connections,  false  will only match insecure connections, and  null  will\nallow any connection type.  Default:  null  $routes\n    - get('/user/login', function() {})\n    - secure(true);\n\n$routes\n    - get('/insecure', function() {})\n    - secure(false);\n\n$routes\n    - get('/', function() {})\n    - secure(null);",
+            "title": "Secure"
+        },
+        {
+            "location": "/basics/dispatching/",
+            "text": "Dispatching is the process of taking information from a route and creating a result which can then be fed into the view. \nIn most frameworks this is a controller or, in the case of micro-frameworks, a closure. Tonis doesn't make any assumptions \nabout what your dispatchable is only that it can be called.\n\n\nSample Dispatchables\n\n\n\n\nA string (can be rendered by \nTonis\\View\\Strategy\\StringStrategy\n)\n\n\nA callable: MyClass::method or [$myClass, 'method'] or ['MyClass', 'method']\n\n\nAny object with the \n__invoke()\n magic method\n\n\nAny object implementing \nTonis\\Dispatcher\\DispatchableInterface\n\n\nA closure \nfunction() {}\n\n\n\n\nExamples\n\n\nDispatchables are up to the user to implement but a few examples are listed below to get you started:\n\n\nTraditional Controller\n\n\nYour standard controller that most major frameworks use.\n\n\nclass MyController\n{\n    public function indexAction() { ... }\n    public function viewAction($id) { ... }\n}\n\n$routes-\nget('/', [MyController::class, 'indexAction']);\n$routes-\nget('/{id}', [MyController::class, 'viewAction']);\n\n\n\n\nMicro-Framework Closure\n\n\nYour standard micro-framework approach with a single closure.\n\n\n$routes-\nget('/', function() { ... });\n$routes-\nget('/{id}', function($id) { ... });\n\n\n\n\nSingle Purpose Action\n\n\nActions extract the individual methods from Controllers and make them their own classes. This has the benefit of keeping\nyour dependencies separate from actions that may or may not use them. The downside, however, is more classes to create.\n\n\nclass MyAction\n{\n    public function __invoke() { ... }\n}\n\nclass MyViewAction\n{\n    public function __invoke($id) { ... }\n}\n\n$routes-\nget('/', MyAction::class);\n$routes-\nget('/{id}', MyViewAction::class]);\n\n\n\n\nUsing the Service Container\n\n\nIf your dispatchable is \nregistered with the service container\n you can pass the service name to the\nroute and it will be pulled from the service container.\n\n\nclass MyController\n{\n    public function __construct(Foo $foo) { ... }\n    public function indexAction() { ... }\n    public function viewAction($id) { ... }\n}\n\n$di-\nset('my.controller', function (\\Tonis\\Di\\Container $di) {\n    return new MyController($di-\nget('foo'));\n});",
+            "title": "Dispatching"
+        },
+        {
+            "location": "/basics/dispatching/#examples",
+            "text": "Dispatchables are up to the user to implement but a few examples are listed below to get you started:  Traditional Controller  Your standard controller that most major frameworks use.  class MyController\n{\n    public function indexAction() { ... }\n    public function viewAction($id) { ... }\n}\n\n$routes- get('/', [MyController::class, 'indexAction']);\n$routes- get('/{id}', [MyController::class, 'viewAction']);  Micro-Framework Closure  Your standard micro-framework approach with a single closure.  $routes- get('/', function() { ... });\n$routes- get('/{id}', function($id) { ... });  Single Purpose Action  Actions extract the individual methods from Controllers and make them their own classes. This has the benefit of keeping\nyour dependencies separate from actions that may or may not use them. The downside, however, is more classes to create.  class MyAction\n{\n    public function __invoke() { ... }\n}\n\nclass MyViewAction\n{\n    public function __invoke($id) { ... }\n}\n\n$routes- get('/', MyAction::class);\n$routes- get('/{id}', MyViewAction::class]);",
+            "title": "Examples"
+        },
+        {
+            "location": "/basics/dispatching/#using-the-service-container",
+            "text": "If your dispatchable is  registered with the service container  you can pass the service name to the\nroute and it will be pulled from the service container.  class MyController\n{\n    public function __construct(Foo $foo) { ... }\n    public function indexAction() { ... }\n    public function viewAction($id) { ... }\n}\n\n$di- set('my.controller', function (\\Tonis\\Di\\Container $di) {\n    return new MyController($di- get('foo'));\n});",
+            "title": "Using the Service Container"
+        },
+        {
+            "location": "/basics/views/",
+            "text": "",
+            "title": "Views"
+        },
+        {
+            "location": "/basics/services/",
+            "text": "Tonis features a light-weight and simple dependency injection container to help with inversion of control. You can \nread more about inversion of control on \nMartin Fowler's site\n.\n\n\nFeatures\n\n\n\n\nParameter management\n\n\nSimple API\n\n\nService decoration.\n\n\nRecursion detection.\n\n\n\n\nParameters\n\n\nYou can assign parameters to the container using array notation. All parameters are available later to setup your \nother services.\n\n\n$di['foo'] = 'bar';\n$di['debug'] = false;\n\n\n\n\nServices\n\n\nYou can define your services using the following:\n\n\n\n\nPassing a string of the fully qualified class name\n\n\nPassing the created object\n\n\nPassing an instance of \nTonis\\Di\\ServiceFactoryInterface\n\n\nUsing any callable\n\n\nAny combination of the above\n\n\n\n\nSetting Services\n\n\n// using the fqcn\n$di-\nset('stdclass', 'StdClass');\n\n// setting the object directly\n$di-\nset('stdclass', new StdClass);\n\n// using a callable\n$di-\nset('stdclass', function (\\Tonis\\Di\\Container $di) {\n    return new StdClass;\n});\n\n// using an instance of ServiceFactoryInterface\nclass StdClassFactory implements \\Tonis\\Di\\ServiceFactoryInterface\n{\n    public function createService(\\Tonis\\Di\\Container $di) {\n        return new StdClass;\n    }\n}\n\n\n\n\nCheck if a service exists\n\n\n$di-\nhas('StdClass'); // true/false\n\n\n\n\nRetrieving services\n\n\n$di-\nget('StdClass');\n\n\n\n\nSetting a raw service\n\n\nSometimes you have a callable that you want to set as a service without the container trying to resolve the callable. \nTo do this pass true as third argument to the \nset\n method.\n\n\nclass MyClass\n{\n    public function __invoke()\n    {\n        return new StdClass;\n    }\n}\n\n$di = $tonis-\ndi();\n// normally get(MyClass::class) will return StdClass\n$di-\nset(MyClass::class, MyClass::class);\n\n// now get(MyClass::class) will return an instance of MyClass instead  \n$di-\nset(MyClass::class, MyClass::class, true);\n\n\n\n\nDecorating Services\n\n\nTonis features powerful service decoration which let's you modify your service configuration at run-time. This is\nvery powerful when coupled with package management to allow customization of services.\n\n\nUsing decorate\n\n\nThe \ndecorate\n method allows you to modify the service after it has been created by the container. The \ndecorate\n method\naccepts a closure or an instance of \nTonis\\Di\\ServiceDecoratorInterface\n.\n\n\n$di-\nset(StdClass::class, new StdClass);\n$di-\ndecorate(StdClass::class, function (\\Tonis\\Di\\Container $di, StdClass $stdclass) {\n    $stdclass-\nfoo = 'bar';\n});\n\n\n\n\nYou could use decorators to conditionally modify debug settings at run-time or setup logging, caching, etc. based on \nthe environment. This is especially useful when third-party packages don't provide a way to configure their services\nthrough configuration.\n\n\nUsing wrap\n\n\nwrap\n is similar to \ndecorate\n but more powerful and allows you to completely replace the service if you wish. \n\n\nclass Dog\n{\n    private $sleep = false;\n    public function speak() { echo $this-\nsleep ? '' : 'Woof!'; }\n    public function sleep() { $this-\nsleep = true; }\n}\n\nclass MyDog\n{\n    public function __construct(Dog $dog) { $this-\ndog = $dog; }\n    public function speak() { echo 'My: ' . $this-\ndog-\nspeak(); }\n}\n\n$di-\nset(Dog::class, Dog::class);\n\n// tell the dog to sleep so it doesn't speak\n$di-\nwrap(Dog::class, function (\\Tonis\\Di\\Container $di, $serviceName, $callable) {\n    $dog = $callable();\n    $dog-\nsleep();\n\n    return $dog;\n});\n\n// I want to use my own dog not the dog the neighbor (package) has\n$di-\nwrap(Dog::class, function (\\Tonis\\Di\\Container $di, $serviceName, $callable) {\n    return new MyDog($callable());\n});\n\n\n\n\nA good use-case for wrap is modifying the service definitions provided by third-party packages. For example, if there\nis a particularly heavy service you could wrap it in a Lazy Proxy to delay the execution until required.\n\n\nBest Practices\n\n\nWhen creating your services you generally want to avoid injecting the container directly into your services. There are \nsituations where this can be useful but doing it too much can make maintenance and testing a nightmare. Instead,\nyou should use factories to create your services with the dependencies your service requires.\n\n\nuse Tonis\\Di\\Container;\n\n// do not do this\n$di-\nset('MyClass', function (Container $di) {\n    return new MyClass($di);\n});\n\n// do this instead\n$di-\nset('MyClass', function (Container $di) {\n    return new MyClass($di-\nget('dep1'), $di-\nget('dep2'));\n});",
+            "title": "Services"
+        },
+        {
+            "location": "/basics/services/#features",
+            "text": "Parameter management  Simple API  Service decoration.  Recursion detection.",
+            "title": "Features"
+        },
+        {
+            "location": "/basics/services/#parameters",
+            "text": "You can assign parameters to the container using array notation. All parameters are available later to setup your \nother services.  $di['foo'] = 'bar';\n$di['debug'] = false;",
+            "title": "Parameters"
+        },
+        {
+            "location": "/basics/services/#services",
+            "text": "You can define your services using the following:   Passing a string of the fully qualified class name  Passing the created object  Passing an instance of  Tonis\\Di\\ServiceFactoryInterface  Using any callable  Any combination of the above   Setting Services  // using the fqcn\n$di- set('stdclass', 'StdClass');\n\n// setting the object directly\n$di- set('stdclass', new StdClass);\n\n// using a callable\n$di- set('stdclass', function (\\Tonis\\Di\\Container $di) {\n    return new StdClass;\n});\n\n// using an instance of ServiceFactoryInterface\nclass StdClassFactory implements \\Tonis\\Di\\ServiceFactoryInterface\n{\n    public function createService(\\Tonis\\Di\\Container $di) {\n        return new StdClass;\n    }\n}  Check if a service exists  $di- has('StdClass'); // true/false  Retrieving services  $di- get('StdClass');",
+            "title": "Services"
+        },
+        {
+            "location": "/basics/services/#setting-a-raw-service",
+            "text": "Sometimes you have a callable that you want to set as a service without the container trying to resolve the callable. \nTo do this pass true as third argument to the  set  method.  class MyClass\n{\n    public function __invoke()\n    {\n        return new StdClass;\n    }\n}\n\n$di = $tonis- di();\n// normally get(MyClass::class) will return StdClass\n$di- set(MyClass::class, MyClass::class);\n\n// now get(MyClass::class) will return an instance of MyClass instead  \n$di- set(MyClass::class, MyClass::class, true);",
+            "title": "Setting a raw service"
+        },
+        {
+            "location": "/basics/services/#decorating-services",
+            "text": "Tonis features powerful service decoration which let's you modify your service configuration at run-time. This is\nvery powerful when coupled with package management to allow customization of services.  Using decorate  The  decorate  method allows you to modify the service after it has been created by the container. The  decorate  method\naccepts a closure or an instance of  Tonis\\Di\\ServiceDecoratorInterface .  $di- set(StdClass::class, new StdClass);\n$di- decorate(StdClass::class, function (\\Tonis\\Di\\Container $di, StdClass $stdclass) {\n    $stdclass- foo = 'bar';\n});  You could use decorators to conditionally modify debug settings at run-time or setup logging, caching, etc. based on \nthe environment. This is especially useful when third-party packages don't provide a way to configure their services\nthrough configuration.  Using wrap  wrap  is similar to  decorate  but more powerful and allows you to completely replace the service if you wish.   class Dog\n{\n    private $sleep = false;\n    public function speak() { echo $this- sleep ? '' : 'Woof!'; }\n    public function sleep() { $this- sleep = true; }\n}\n\nclass MyDog\n{\n    public function __construct(Dog $dog) { $this- dog = $dog; }\n    public function speak() { echo 'My: ' . $this- dog- speak(); }\n}\n\n$di- set(Dog::class, Dog::class);\n\n// tell the dog to sleep so it doesn't speak\n$di- wrap(Dog::class, function (\\Tonis\\Di\\Container $di, $serviceName, $callable) {\n    $dog = $callable();\n    $dog- sleep();\n\n    return $dog;\n});\n\n// I want to use my own dog not the dog the neighbor (package) has\n$di- wrap(Dog::class, function (\\Tonis\\Di\\Container $di, $serviceName, $callable) {\n    return new MyDog($callable());\n});  A good use-case for wrap is modifying the service definitions provided by third-party packages. For example, if there\nis a particularly heavy service you could wrap it in a Lazy Proxy to delay the execution until required.",
+            "title": "Decorating Services"
+        },
+        {
+            "location": "/basics/services/#best-practices",
+            "text": "When creating your services you generally want to avoid injecting the container directly into your services. There are \nsituations where this can be useful but doing it too much can make maintenance and testing a nightmare. Instead,\nyou should use factories to create your services with the dependencies your service requires.  use Tonis\\Di\\Container;\n\n// do not do this\n$di- set('MyClass', function (Container $di) {\n    return new MyClass($di);\n});\n\n// do this instead\n$di- set('MyClass', function (Container $di) {\n    return new MyClass($di- get('dep1'), $di- get('dep2'));\n});",
+            "title": "Best Practices"
+        },
+        {
+            "location": "/basics/packages/",
+            "text": "",
+            "title": "Packages"
+        },
+        {
+            "location": "/advanced/middleware/",
+            "text": "Tonis is PSR-7 compatible and takes \nPsr\\Http\\Message\\RequestInterface\n as input and outputs a \n\nPsr\\Http\\Message\\ResponseInterface\n. You can plug Tonis into a middleware framework like \n\nStratigility\n to have separate applications running based on the path.\nFurthemore, with Tonis' event architecture you can streamline each application to get the most performance based on what\nthe application context is.\n\n\nExample\n\n\nThe following \nindex.php\n will serve the same \nExamplePackage\n through Tonis. The \nExamplePackage\n\ndefines a single route to a single dispatchable which returns an array. \ncreateWeb()\n and \ncreateApi()\n are factory\nmethods that create tailored Tonis subscribers based on the application context.\n\n\n// route\n$routes-\nget('/{name}', [IndexController::class, 'testAction']);\n\n\n\n\n// controller\nnamespace ExamplePackage\\Home;\n\nclass IndexController\n{\n    public function testAction()\n    {\n        return ['foo' =\n 'bar'];\n    }\n}\n\n\n\n\n\n// index.php\nrequire __DIR__ . '/../vendor/autoload.php';\n\n$config = ['packages' =\n [ExamplePackage\\ExamplePackage::class]];\n$tonisFactory = new Tonis\\Tonis\\Factory\\TonisFactory;\n\n$app = new Zend\\Stratigility\\MiddlewarePipe();\n\n// createApi() uses subscribers optimized for JSON APIs\n$app-\npipe('/api', $tonisFactory-\ncreateApi($config));\n\n// createWeb() uses subscribers optimized for your typical web application\n$app-\npipe($tonisFactory-\ncreateWeb($config));\n\n$server = Zend\\Diactoros\\Server::createServer($app, $_SERVER, $_GET, $_POST, $_COOKIE, $_FILES);\n$server-\nlisten();\n\n\n\n\nNow that the middleware pipe is established you can visit \n/{name}\n or \n/api/{name}\n and the dispatchable will\nreturn the same result. However, during rendering the subscribers registered to each instance changes the response body.\n\n\nWhen visiting \n/SpiffyJr\n the response body is \nHello SpiffyJr, welcome to Tonis.\n.\n\n\nWhen visiting \n/api/SpiffyJr\n the response body is \n{\"name\": \"SpiffyJr\"}\n.",
+            "title": "Middleware"
+        },
+        {
+            "location": "/advanced/middleware/#example",
+            "text": "The following  index.php  will serve the same  ExamplePackage  through Tonis. The  ExamplePackage \ndefines a single route to a single dispatchable which returns an array.  createWeb()  and  createApi()  are factory\nmethods that create tailored Tonis subscribers based on the application context.  // route\n$routes- get('/{name}', [IndexController::class, 'testAction']);  // controller\nnamespace ExamplePackage\\Home;\n\nclass IndexController\n{\n    public function testAction()\n    {\n        return ['foo' =  'bar'];\n    }\n}  // index.php\nrequire __DIR__ . '/../vendor/autoload.php';\n\n$config = ['packages' =  [ExamplePackage\\ExamplePackage::class]];\n$tonisFactory = new Tonis\\Tonis\\Factory\\TonisFactory;\n\n$app = new Zend\\Stratigility\\MiddlewarePipe();\n\n// createApi() uses subscribers optimized for JSON APIs\n$app- pipe('/api', $tonisFactory- createApi($config));\n\n// createWeb() uses subscribers optimized for your typical web application\n$app- pipe($tonisFactory- createWeb($config));\n\n$server = Zend\\Diactoros\\Server::createServer($app, $_SERVER, $_GET, $_POST, $_COOKIE, $_FILES);\n$server- listen();  Now that the middleware pipe is established you can visit  /{name}  or  /api/{name}  and the dispatchable will\nreturn the same result. However, during rendering the subscribers registered to each instance changes the response body.  When visiting  /SpiffyJr  the response body is  Hello SpiffyJr, welcome to Tonis. .  When visiting  /api/SpiffyJr  the response body is  {\"name\": \"SpiffyJr\"} .",
+            "title": "Example"
+        },
+        {
+            "location": "/advanced/lifecycle/",
+            "text": "",
+            "title": "Lifecycle"
+        },
+        {
+            "location": "/development/vagrant/",
+            "text": "Vagrant\n\n\nTonis comes with a Vagrantfile. Utilizing \nVagrant\n, the working directory will be synced \nwith the virtualized environment. You will need to have both \nVagrant\n and \n\nDocker\n installed. You are responsible for running composer and bower from the host.\n\n\nsudo vagrant up --provider=docker\n\n\n\n\nSSH is not enabled, but you can still get a shell prompt in the container.\n\n\n$ sudo docker ps\nCONTAINER ID        IMAGE                             COMMAND             CREATED             STATUS              PORTS                  NAMES\n45d0c5d94ee0        czeeb/tonis-docker-nginx:latest   \n/sbin/my_init\n     13 minutes ago      Up 13 minutes       0.0.0.0:8080-\n80/tcp   tonis_nginx_1433860664\n\n$ sudo docker exec -t -i tonis_nginx_1433860664 bash -l\nroot@45d0c5d94ee0:/#",
+            "title": "Vagrant"
+        },
+        {
+            "location": "/development/vagrant/#vagrant",
+            "text": "Tonis comes with a Vagrantfile. Utilizing  Vagrant , the working directory will be synced \nwith the virtualized environment. You will need to have both  Vagrant  and  Docker  installed. You are responsible for running composer and bower from the host.  sudo vagrant up --provider=docker  SSH is not enabled, but you can still get a shell prompt in the container.  $ sudo docker ps\nCONTAINER ID        IMAGE                             COMMAND             CREATED             STATUS              PORTS                  NAMES\n45d0c5d94ee0        czeeb/tonis-docker-nginx:latest    /sbin/my_init      13 minutes ago      Up 13 minutes       0.0.0.0:8080- 80/tcp   tonis_nginx_1433860664\n\n$ sudo docker exec -t -i tonis_nginx_1433860664 bash -l\nroot@45d0c5d94ee0:/#",
+            "title": "Vagrant"
+        },
+        {
+            "location": "/development/docker/",
+            "text": "Docker\n\n\nTonis comes with a Dockerfile. The difference between using \nVagrant\n and \nDocker\n is that \nany changes made to the code after the Docker container has been created will not be reflected in the container.  The \nprimary usage of the docker container is for production where code only changes on deployment.\n\n\nThe Dockerfile takes care of running both composer and bower when the container is built.",
+            "title": "Docker"
+        },
+        {
+            "location": "/development/docker/#docker",
+            "text": "Tonis comes with a Dockerfile. The difference between using  Vagrant  and  Docker  is that \nany changes made to the code after the Docker container has been created will not be reflected in the container.  The \nprimary usage of the docker container is for production where code only changes on deployment.  The Dockerfile takes care of running both composer and bower when the container is built.",
+            "title": "Docker"
+        },
+        {
+            "location": "/other/components-and-packages/",
+            "text": "Components \n Packages\n\n\nThe following is a list of components and packages maintained by Tonis. All code has the following requirements:\n\n\n\n\nPHP 5.5 or higher, PHP 7, and HHVM support.\n\n\nComposer support\n\n\n100% unit test coverage\n\n\nMinimal dependencies\n\n\nPSR-1/PSR-2 and PSR-4 compliant\n\n\nHigh quality code (\n= 9 on \nScrutinizer\n)\n\n\n\n\nComponents\n\n\n\n\n\n\n\n\nComponent\n\n\nBuild Status\n\n\nCode Coverage\n\n\nCode Quality\n\n\n\n\n\n\n\n\n\n\nDi\n\n\n\n\n\n\n\n\n\n\n\n\nDispatcher\n\n\n\n\n\n\n\n\n\n\n\n\nEvent\n\n\n\n\n\n\n\n\n\n\n\n\nMvc\n\n\n\n\n\n\n\n\n\n\n\n\nPackage\n\n\n\n\n\n\n\n\n\n\n\n\nRouter\n\n\n\n\n\n\n\n\n\n\n\n\nView\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPackages\n\n\n\n\n\n\n\n\nPackage\n\n\nBuild Status\n\n\nCode Coverage\n\n\nCode Quality\n\n\n\n\n\n\n\n\n\n\nAsset\n\n\n\n\n\n\n\n\n\n\n\n\nDoctrine\n\n\n\n\n\n\n\n\n\n\n\n\nDoctrine ORM",
+            "title": "Components & Packages"
+        },
+        {
+            "location": "/other/components-and-packages/#components-packages",
+            "text": "The following is a list of components and packages maintained by Tonis. All code has the following requirements:   PHP 5.5 or higher, PHP 7, and HHVM support.  Composer support  100% unit test coverage  Minimal dependencies  PSR-1/PSR-2 and PSR-4 compliant  High quality code ( = 9 on  Scrutinizer )",
+            "title": "Components &amp; Packages"
+        },
+        {
+            "location": "/other/components-and-packages/#components",
+            "text": "Component  Build Status  Code Coverage  Code Quality      Di       Dispatcher       Event       Mvc       Package       Router       View",
+            "title": "Components"
+        },
+        {
+            "location": "/other/components-and-packages/#packages",
+            "text": "Package  Build Status  Code Coverage  Code Quality      Asset       Doctrine       Doctrine ORM",
+            "title": "Packages"
+        }
+    ]
+}

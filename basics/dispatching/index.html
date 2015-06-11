@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Dispatching - Tonis</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Dispatching";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Tonis</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">What is Tonis?</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../getting-started/installation/">Installation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../getting-started/contributing/">Contributing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../getting-started/license/">License</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Configuration</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../configuration/overview/">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../configuration/settings/">Settings</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Basics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../routing/">Routing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Dispatching</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#sample-dispatchables">Sample Dispatchables</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#examples">Examples</a></li>
+                
+                    <li><a class="toctree-l4" href="#traditional-controller">Traditional Controller</a></li>
+                
+                    <li><a class="toctree-l4" href="#micro-framework-closure">Micro-Framework Closure</a></li>
+                
+                    <li><a class="toctree-l4" href="#single-purpose-action">Single Purpose Action</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#using-the-service-container">Using the Service Container</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../views/">Views</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../services/">Services</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../packages/">Packages</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Advanced Topics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/middleware/">Middleware</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced/lifecycle/">Lifecycle</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Development</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/vagrant/">Vagrant</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../development/docker/">Docker</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Other</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../other/components-and-packages/">Components & Packages</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Tonis</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Basics &raquo;</li>
+        
+      
+    
+    <li>Dispatching</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/tonis-io/tonis/" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>Dispatching is the process of taking information from a route and creating a result which can then be fed into the view. 
+In most frameworks this is a controller or, in the case of micro-frameworks, a closure. Tonis doesn't make any assumptions 
+about what your dispatchable is only that it can be called.</p>
+<h3 id="sample-dispatchables">Sample Dispatchables</h3>
+<ul>
+<li>A string (can be rendered by <code>Tonis\View\Strategy\StringStrategy</code>)</li>
+<li>A callable: MyClass::method or [$myClass, 'method'] or ['MyClass', 'method']</li>
+<li>Any object with the <code>__invoke()</code> magic method</li>
+<li>Any object implementing <code>Tonis\Dispatcher\DispatchableInterface</code></li>
+<li>A closure <code>function() {}</code></li>
+</ul>
+<h2 id="examples">Examples</h2>
+<p>Dispatchables are up to the user to implement but a few examples are listed below to get you started:</p>
+<h3 id="traditional-controller">Traditional Controller</h3>
+<p>Your standard controller that most major frameworks use.</p>
+<pre><code class="php">class MyController
+{
+    public function indexAction() { ... }
+    public function viewAction($id) { ... }
+}
+
+$routes-&gt;get('/', [MyController::class, 'indexAction']);
+$routes-&gt;get('/{id}', [MyController::class, 'viewAction']);
+</code></pre>
+
+<h3 id="micro-framework-closure">Micro-Framework Closure</h3>
+<p>Your standard micro-framework approach with a single closure.</p>
+<pre><code class="php">$routes-&gt;get('/', function() { ... });
+$routes-&gt;get('/{id}', function($id) { ... });
+</code></pre>
+
+<h3 id="single-purpose-action">Single Purpose Action</h3>
+<p>Actions extract the individual methods from Controllers and make them their own classes. This has the benefit of keeping
+your dependencies separate from actions that may or may not use them. The downside, however, is more classes to create.</p>
+<pre><code class="php">class MyAction
+{
+    public function __invoke() { ... }
+}
+
+class MyViewAction
+{
+    public function __invoke($id) { ... }
+}
+
+$routes-&gt;get('/', MyAction::class);
+$routes-&gt;get('/{id}', MyViewAction::class]);
+</code></pre>
+
+<h2 id="using-the-service-container">Using the Service Container</h2>
+<p>If your dispatchable is <a href="../../basics/services">registered with the service container</a> you can pass the service name to the
+route and it will be pulled from the service container.</p>
+<pre><code class="php">class MyController
+{
+    public function __construct(Foo $foo) { ... }
+    public function indexAction() { ... }
+    public function viewAction($id) { ... }
+}
+
+$di-&gt;set('my.controller', function (\Tonis\Di\Container $di) {
+    return new MyController($di-&gt;get('foo'));
+});
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../views/" class="btn btn-neutral float-right" title="Views"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../routing/" class="btn btn-neutral" title="Routing"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>&copy; 2015 Kyle Spraggs. All Rights Reserved.</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../routing/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../views/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
