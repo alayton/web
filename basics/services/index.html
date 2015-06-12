@@ -308,13 +308,13 @@ $di['debug'] = false;
 </ul>
 <h3 id="setting-services">Setting Services</h3>
 <pre><code class="php">// using the fqcn
-$di-&gt;set('stdclass', 'StdClass');
+$services-&gt;set('stdclass', 'StdClass');
 
 // setting the object directly
-$di-&gt;set('stdclass', new StdClass);
+$services-&gt;set('stdclass', new StdClass);
 
 // using a callable
-$di-&gt;set('stdclass', function (\Tonis\Di\Container $di) {
+$services-&gt;set('stdclass', function (\Tonis\Di\Container $di) {
     return new StdClass;
 });
 
@@ -328,11 +328,11 @@ class StdClassFactory implements \Tonis\Di\ServiceFactoryInterface
 </code></pre>
 
 <h3 id="check-if-a-service-exists">Check if a service exists</h3>
-<pre><code class="php">$di-&gt;has('StdClass'); // true/false
+<pre><code class="php">$services-&gt;has('StdClass'); // true/false
 </code></pre>
 
 <h3 id="retrieving-services">Retrieving services</h3>
-<pre><code class="php">$di-&gt;get('StdClass');
+<pre><code class="php">$services-&gt;get('StdClass');
 </code></pre>
 
 <h2 id="setting-a-raw-service">Setting a raw service</h2>
@@ -348,10 +348,10 @@ To do this pass true as third argument to the <code>set</code> method.</p>
 
 $di = $app-&gt;getServiceContainer();
 // normally get(MyClass::class) will return StdClass
-$di-&gt;set(MyClass::class, MyClass::class);
+$services-&gt;set(MyClass::class, MyClass::class);
 
 // now get(MyClass::class) will return an instance of MyClass instead  
-$di-&gt;set(MyClass::class, MyClass::class, true);
+$services-&gt;set(MyClass::class, MyClass::class, true);
 </code></pre>
 
 <h2 id="decorating-services">Decorating Services</h2>
@@ -360,8 +360,8 @@ very powerful when coupled with package management to allow customization of ser
 <h3 id="using-decorate">Using decorate</h3>
 <p>The <code>decorate</code> method allows you to modify the service after it has been created by the container. The <code>decorate</code> method
 accepts a closure or an instance of <code>Tonis\Di\ServiceDecoratorInterface</code>.</p>
-<pre><code class="php">$di-&gt;set(StdClass::class, new StdClass);
-$di-&gt;decorate(StdClass::class, function (\Tonis\Di\Container $di, StdClass $stdclass) {
+<pre><code class="php">$services-&gt;set(StdClass::class, new StdClass);
+$services-&gt;decorate(StdClass::class, function (\Tonis\Di\Container $di, StdClass $stdclass) {
     $stdclass-&gt;foo = 'bar';
 });
 </code></pre>
@@ -384,10 +384,10 @@ class MyDog
     public function speak() { echo 'My: ' . $this-&gt;dog-&gt;speak(); }
 }
 
-$di-&gt;set(Dog::class, Dog::class);
+$services-&gt;set(Dog::class, Dog::class);
 
 // tell the dog to sleep so it doesn't speak
-$di-&gt;wrap(Dog::class, function (\Tonis\Di\Container $di, $serviceName, $callable) {
+$services-&gt;wrap(Dog::class, function (\Tonis\Di\Container $di, $serviceName, $callable) {
     $dog = $callable();
     $dog-&gt;sleep();
 
@@ -395,7 +395,7 @@ $di-&gt;wrap(Dog::class, function (\Tonis\Di\Container $di, $serviceName, $calla
 });
 
 // I want to use my own dog not the dog the neighbor (package) has
-$di-&gt;wrap(Dog::class, function (\Tonis\Di\Container $di, $serviceName, $callable) {
+$services-&gt;wrap(Dog::class, function (\Tonis\Di\Container $di, $serviceName, $callable) {
     return new MyDog($callable());
 });
 </code></pre>
@@ -409,13 +409,13 @@ you should use factories to create your services with the dependencies your serv
 <pre><code class="php">use Tonis\Di\Container;
 
 // do not do this
-$di-&gt;set('MyClass', function (Container $di) {
+$services-&gt;set('MyClass', function (Container $di) {
     return new MyClass($di);
 });
 
 // do this instead
-$di-&gt;set('MyClass', function (Container $di) {
-    return new MyClass($di-&gt;get('dep1'), $di-&gt;get('dep2'));
+$services-&gt;set('MyClass', function (Container $di) {
+    return new MyClass($services-&gt;get('dep1'), $services-&gt;get('dep2'));
 });
 </code></pre>
               

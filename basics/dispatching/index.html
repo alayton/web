@@ -368,8 +368,8 @@ route and it will be pulled from the service container.</p>
     public function viewAction($id) { ... }
 }
 
-$di-&gt;set('my.controller', function (\Tonis\Di\Container $di) {
-    return new MyController($di-&gt;get('foo'));
+$services-&gt;set('my.controller', function (\Tonis\Di\Container $di) {
+    return new MyController($services-&gt;get('foo'));
 });
 </code></pre>
               

@@ -275,7 +275,7 @@ implementation like <code>zendframework/zend-diactoros</code>.</p>
 require __DIR__ . '/vendor/autoload.php';
 
 $app = (new \Tonis\Web\Factory\TonisFactory)-&gt;createWeb();
-$routes = $app-&gt;routes();
+$routes = $app-&gt;getRouter();
 
 $routes-&gt;get('/hello/{name}', function ($name) {
     return sprintf('Hello %s, welcome to Tonis', $name);
