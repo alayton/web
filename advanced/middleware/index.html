@@ -286,15 +286,15 @@ class IndexController
 require __DIR__ . '/../vendor/autoload.php';
 
 $config = ['packages' =&gt; [ExamplePackage\ExamplePackage::class]];
-$tonisFactory = new Tonis\Tonis\Factory\TonisFactory;
+$appFactory = new Tonis\Web\Factory\TonisFactory;
 
 $app = new Zend\Stratigility\MiddlewarePipe();
 
 // createApi() uses subscribers optimized for JSON APIs
-$app-&gt;pipe('/api', $tonisFactory-&gt;createApi($config));
+$app-&gt;pipe('/api', $appFactory-&gt;createApi($config));
 
 // createWeb() uses subscribers optimized for your typical web application
-$app-&gt;pipe($tonisFactory-&gt;createWeb($config));
+$app-&gt;pipe($appFactory-&gt;createWeb($config));
 
 $server = Zend\Diactoros\Server::createServer($app, $_SERVER, $_GET, $_POST, $_COOKIE, $_FILES);
 $server-&gt;listen();

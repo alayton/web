@@ -346,7 +346,7 @@ To do this pass true as third argument to the <code>set</code> method.</p>
     }
 }
 
-$di = $tonis-&gt;di();
+$di = $app-&gt;getServiceContainer();
 // normally get(MyClass::class) will return StdClass
 $di-&gt;set(MyClass::class, MyClass::class);
 

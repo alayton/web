@@ -4,7 +4,7 @@
     
     <url>
      <loc>http://tonis.io/</loc>
-     <lastmod>2015-06-11</lastmod>
+     <lastmod>2015-06-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,19 +13,19 @@
         
     <url>
      <loc>http://tonis.io/getting-started/installation/</loc>
-     <lastmod>2015-06-11</lastmod>
+     <lastmod>2015-06-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://tonis.io/getting-started/contributing/</loc>
-     <lastmod>2015-06-11</lastmod>
+     <lastmod>2015-06-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://tonis.io/getting-started/license/</loc>
-     <lastmod>2015-06-11</lastmod>
+     <lastmod>2015-06-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -35,13 +35,13 @@
         
     <url>
      <loc>http://tonis.io/configuration/overview/</loc>
-     <lastmod>2015-06-11</lastmod>
+     <lastmod>2015-06-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://tonis.io/configuration/settings/</loc>
-     <lastmod>2015-06-11</lastmod>
+     <lastmod>2015-06-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -51,31 +51,31 @@
         
     <url>
      <loc>http://tonis.io/basics/routing/</loc>
-     <lastmod>2015-06-11</lastmod>
+     <lastmod>2015-06-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://tonis.io/basics/dispatching/</loc>
-     <lastmod>2015-06-11</lastmod>
+     <lastmod>2015-06-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://tonis.io/basics/views/</loc>
-     <lastmod>2015-06-11</lastmod>
+     <lastmod>2015-06-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://tonis.io/basics/services/</loc>
-     <lastmod>2015-06-11</lastmod>
+     <lastmod>2015-06-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://tonis.io/basics/packages/</loc>
-     <lastmod>2015-06-11</lastmod>
+     <lastmod>2015-06-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -85,13 +85,13 @@
         
     <url>
      <loc>http://tonis.io/advanced/middleware/</loc>
-     <lastmod>2015-06-11</lastmod>
+     <lastmod>2015-06-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://tonis.io/advanced/lifecycle/</loc>
-     <lastmod>2015-06-11</lastmod>
+     <lastmod>2015-06-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -101,13 +101,13 @@
         
     <url>
      <loc>http://tonis.io/development/vagrant/</loc>
-     <lastmod>2015-06-11</lastmod>
+     <lastmod>2015-06-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://tonis.io/development/docker/</loc>
-     <lastmod>2015-06-11</lastmod>
+     <lastmod>2015-06-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -117,7 +117,7 @@
         
     <url>
      <loc>http://tonis.io/other/components-and-packages/</loc>
-     <lastmod>2015-06-11</lastmod>
+     <lastmod>2015-06-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
